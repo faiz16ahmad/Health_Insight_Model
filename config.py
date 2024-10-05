@@ -7,8 +7,6 @@ MODELS_DIR = "models"
 DATA_DIR = "data"
 
 TRAINED_MODEL_RF = os.path.join(MODELS_DIR, "randomforest_disease_pred.pkl")
-DIABETES_MODEL = os.path.join(MODELS_DIR, "diabetes_early_stage.pkl")
-LIVER_MODEL = os.path.join(MODELS_DIR, "Liver_GradientBoostingClassifier_model.pkl")
 
 DISEASE_DATA = os.path.join(DATA_DIR, "disease.json")
 PRECAUTIONS_DATA = os.path.join(DATA_DIR, "precautions.csv")
