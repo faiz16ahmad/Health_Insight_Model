@@ -5,7 +5,7 @@ import streamlit as st
 from config import doctor_search
 # Function to load model and make predictions
 def predict_health_status(age, hypertension, heart_disease, ever_married, work_type, avg_glucose_level, bmi, smoking_status):
-    model = joblib.load(r'models\random_forest_pipeline.pkl')  # Load your saved Random Forest model pipeline
+    model = joblib.load(r'models/random_forest_pipeline.pkl')  # Load your saved Random Forest model pipeline
     
     # Prepare the input data as a DataFrame to match the model's expected format
     input_data = pd.DataFrame({
