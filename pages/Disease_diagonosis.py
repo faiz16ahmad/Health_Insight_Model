@@ -79,15 +79,13 @@ def fetch_disease_info(disease=None):
     gen_info = disease_data[disease]["Disease overview"][2].get("general_info")
     causes = disease_data[disease]["Disease overview"][2].get("cause")
 
+    types = None
     try:
         types = disease_data[disease]["types"]
     except:
         pass
 
-    if types:
-        disease_type = split_by_pipe(types)
-    else:
-        disease_type = None
+    disease_type = split_by_pipe(types) if types else None
 
     gen_info_lst = split_by_pipe(gen_info)
     symptoms = disease_data[disease]["symptoms"].replace("|", ", ")
